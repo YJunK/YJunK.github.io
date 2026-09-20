@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quant CV | Portfolio</title>
+    <title>Yejun Kim | CV</title>
     
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,44 +51,92 @@
     <!-- Navigation -->
     <nav class="fixed w-full bg-white/90 backdrop-blur-md border-b border-gray-200 z-50">
         <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight text-slate-900">Quant.Portfolio</a>
+            <a href="#" class="text-xl font-bold tracking-tight text-slate-900">Yejun Kim</a>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
                 <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
+                <a href="#education" class="hover:text-blue-600 transition-colors">Education</a>
                 <a href="#skills" class="hover:text-blue-600 transition-colors">Skills & Cert</a>
                 <a href="#experience" class="hover:text-blue-600 transition-colors">Experience</a>
-                <a href="#projects" class="hover:text-blue-600 transition-colors">Projects</a>
+                <a href="#military" class="hover:text-blue-600 transition-colors">Military</a>
             </div>
-            <!-- Mobile Menu Icon (Simplified for template) -->
-            <button class="md:hidden text-slate-600 hover:text-slate-900">
-                <i class="ph ph-list text-2xl"></i>
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-button" class="md:hidden text-slate-600 hover:text-slate-900" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="ph ph-list text-2xl" id="mobile-menu-icon"></i>
             </button>
         </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" hidden class="md:hidden border-t border-gray-200 bg-white/95 backdrop-blur-md">
+            <div class="flex flex-col px-6 py-4 space-y-3 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
+                <a href="#education" class="hover:text-blue-600 transition-colors">Education</a>
+                <a href="#skills" class="hover:text-blue-600 transition-colors">Skills & Cert</a>
+                <a href="#experience" class="hover:text-blue-600 transition-colors">Experience</a>
+                <a href="#military" class="hover:text-blue-600 transition-colors">Military</a>
+            </div>
+        </div>
     </nav>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+
+        function closeMobileMenu() {
+            mobileMenu.hidden = true;
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+            mobileMenuIcon.className = 'ph ph-list text-2xl';
+        }
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isOpen = !mobileMenu.hidden;
+            mobileMenu.hidden = isOpen;
+            mobileMenuButton.setAttribute('aria-expanded', String(!isOpen));
+            mobileMenuIcon.className = isOpen ? 'ph ph-list text-2xl' : 'ph ph-x text-2xl';
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+    </script>
 
     <!-- Hero / Profile Section -->
     <section id="about" class="pt-32 pb-20 px-6 max-w-5xl mx-auto">
         <div class="flex flex-col md:flex-row gap-12 items-start">
             <div class="flex-1">
                 <h1 class="text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-4">
-                    [Your Name]<br>
-                    <span class="text-blue-600 text-3xl md:text-4xl font-semibold">Quantitative Analyst</span>
+                    Yejun Kim<br>
+                    <span class="text-blue-600 text-3xl md:text-4xl font-semibold">Aspiring Researcher in Finance & ML</span>
                 </h1>
-                
+
                 <div class="flex flex-wrap gap-4 text-sm text-slate-500 mb-8 mt-4">
-                    <div class="flex items-center gap-1"><i class="ph ph-envelope"></i> email@example.com</div>
-                    <div class="flex items-center gap-1"><i class="ph ph-phone"></i> +82 10-XXXX-XXXX</div>
-                    <div class="flex items-center gap-1"><i class="ph ph-linkedin-logo"></i> linkedin.com/in/username</div>
-                    <div class="flex items-center gap-1"><i class="ph ph-github-logo"></i> github.com/username</div>
+                    <a href="mailto:yejuny2@postech.ac.kr" class="flex items-center gap-1 hover:text-blue-600 transition-colors"><i class="ph ph-envelope"></i> yejuny2@postech.ac.kr</a>
+                    <a href="https://linkedin.com/in/YJunK" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 hover:text-blue-600 transition-colors"><i class="ph ph-linkedin-logo"></i> linkedin.com/in/YJunK</a>
+                    <a href="https://github.com/YJunK" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 hover:text-blue-600 transition-colors"><i class="ph ph-github-logo"></i> github.com/YJunK</a>
                 </div>
 
                 <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
                     <h2 class="text-xl font-bold text-slate-900">Profile Summary</h2>
                     <div class="section-line"></div>
                     <p class="text-slate-600 leading-relaxed">
-                        수학적 백그라운드를 바탕으로 복잡한 금융 데이터에서 인사이트를 도출하는 것에 열정을 가진 퀀트 분석가입니다. 통계적 모델링과 데이터 분석 역량을 갖추고 있으며, 군 행정병 복무를 통해 길러진 꼼꼼한 업무 처리 능력과 데이터 관리 및 문서화 역량을 실무에 적용할 수 있습니다. 알고리즘 트레이딩 전략 구현 및 리스크 모델링에 강점이 있습니다.
+                        Mathematics and computer science student at POSTECH preparing to pursue graduate study in machine learning theory. My research interests center on geometric deep learning — understanding how the underlying geometry of data can be leveraged in learning algorithms — with further curiosity in its applications to finance and in the intersection of partial differential equations and AI.
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 px-6 max-w-5xl mx-auto">
+        <h2 class="text-2xl font-bold text-slate-900">Education</h2>
+        <div class="section-line"></div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1">
+                <h3 class="text-lg font-bold text-slate-900">Pohang University of Science and Technology (POSTECH)</h3>
+                <span class="text-sm text-slate-500 font-medium">Senior (4th Year)</span>
+            </div>
+            <p class="text-slate-600 mt-1">B.S. in Mathematics (Primary Major), Double Major in Computer Science</p>
+            <p class="text-sm text-slate-500 mt-2">GPA: 3.75 / 4.30</p>
         </div>
     </section>
 
@@ -105,11 +153,18 @@
                     <div class="space-y-4">
                         <div class="border border-gray-100 p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow">
                             <h3 class="font-semibold text-slate-900 flex items-center gap-2">
+                                <i class="ph ph-brain text-blue-600 text-xl"></i> Machine Learning & Mathematics
+                            </h3>
+                            <p class="text-sm text-slate-600 mt-2">Geometric Deep Learning, PyTorch, Differential Geometry, Partial Differential Equations, Optimization</p>
+                        </div>
+
+                        <div class="border border-gray-100 p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow">
+                            <h3 class="font-semibold text-slate-900 flex items-center gap-2">
                                 <i class="ph ph-code text-blue-600 text-xl"></i> Programming & DB
                             </h3>
-                            <p class="text-sm text-slate-600 mt-2">Python (Pandas, NumPy, SciPy, Scikit-learn), SQL, Excel/VBA</p>
+                            <p class="text-sm text-slate-600 mt-2">Python (PyTorch, Pandas, NumPy, SciPy, Scikit-learn), SQL, Excel/VBA</p>
                         </div>
-                        
+
                         <div class="border border-gray-100 p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow">
                             <h3 class="font-semibold text-slate-900 flex items-center gap-2">
                                 <i class="ph ph-chart-line-up text-blue-600 text-xl"></i> Quantitative Finance
@@ -131,7 +186,7 @@
                             </div>
                             <div>
                                 <h3 class="font-semibold text-slate-900">CFA Level 2</h3>
-                                <p class="text-sm text-slate-500">CFA Institute • Passed (또는 Candidate)</p>
+                                <p class="text-sm text-slate-500">CFA Institute • Candidate</p>
                             </div>
                         </div>
                         
@@ -141,7 +196,17 @@
                             </div>
                             <div>
                                 <h3 class="font-semibold text-slate-900">CFA Level 1</h3>
-                                <p class="text-sm text-slate-500">CFA Institute • Passed</p>
+                                <p class="text-sm text-slate-500">CFA Institute • Passed, Mar 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50/50 transition-colors">
+                            <div class="bg-gray-100 text-slate-700 p-2 rounded text-xl flex-shrink-0">
+                                <i class="ph ph-certificate"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-slate-900">ADsP (Advanced Data Analytics Semi-Professional)</h3>
+                                <p class="text-sm text-slate-500">Korea Data Agency • Certified, Sep 2025</p>
                             </div>
                         </div>
                     </div>
@@ -152,47 +217,45 @@
 
     <!-- Experience Section -->
     <section id="experience" class="py-20 px-6 max-w-5xl mx-auto">
-        <h2 class="text-2xl font-bold text-slate-900">Work Experience</h2>
+        <h2 class="text-2xl font-bold text-slate-900">Research Experience</h2>
         <div class="section-line"></div>
-        
+
         <div class="space-y-12 mt-8">
-            <!-- Experience Item 1 -->
+            <!-- Experience Item 1 (Shape Lab) -->
             <div class="relative pl-8 md:pl-0">
                 <!-- Timeline line for mobile -->
                 <div class="md:hidden absolute left-0 top-2 bottom-0 w-px bg-gray-200"></div>
-                
+
                 <div class="md:grid md:grid-cols-4 md:gap-8 items-baseline">
                     <div class="md:col-span-1 text-sm text-slate-500 font-medium pb-2 md:pb-0 relative">
                         <!-- Timeline dot for mobile -->
                         <div class="md:hidden absolute left-[-37px] top-1.5 w-3 h-3 rounded-full bg-blue-600 ring-4 ring-white"></div>
-                        Oct 2025 - Present
+                        Sep 2026 - Present
                     </div>
                     <div class="md:col-span-3">
-                        <h3 class="text-lg font-bold text-slate-900">[Company Name]</h3>
-                        <div class="text-blue-600 font-medium mb-3">Off-Cycle Intern (Quant Analyst)</div>
+                        <h3 class="text-lg font-bold text-slate-900">Shape Lab, Graduate School of Artificial Intelligence, POSTECH</h3>
+                        <div class="text-blue-600 font-medium mb-3">Undergraduate Research Intern • Advisor: Prof. Ilwoo Ryu</div>
                         <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm leading-relaxed">
-                            <li>Supported the development and backtesting of quantitative trading strategies using Python.</li>
-                            <li>Automated financial data extraction and preprocessing pipelines using SQL and Pandas, improving efficiency by 30%.</li>
-                            <li>Assisted in building factor models to identify alpha signals across various asset classes.</li>
+                            <li>Researching how the geometry of shapes can be analyzed and represented using deep learning methods.</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Experience Item 2 (Military) -->
+            <!-- Experience Item 2 (FIRM Lab) -->
             <div class="relative pl-8 md:pl-0">
                 <div class="md:hidden absolute left-0 top-2 bottom-0 w-px bg-gray-200"></div>
                 <div class="md:grid md:grid-cols-4 md:gap-8 items-baseline">
                     <div class="md:col-span-1 text-sm text-slate-500 font-medium pb-2 md:pb-0 relative">
-                        <div class="md:hidden absolute left-[-37px] top-1.5 w-3 h-3 rounded-full bg-gray-400 ring-4 ring-white"></div>
-                        Mar 2023 - Sep 2024
+                        <div class="md:hidden absolute left-[-37px] top-1.5 w-3 h-3 rounded-full bg-blue-600 ring-4 ring-white"></div>
+                        Sep 2024 - Dec 2024
                     </div>
                     <div class="md:col-span-3">
-                        <h3 class="text-lg font-bold text-slate-900">Republic of Korea Armed Forces</h3>
-                        <div class="text-slate-600 font-medium mb-3">Administrative Clerk (Sergeant)</div>
+                        <h3 class="text-lg font-bold text-slate-900">FIRM Lab, Dept. of Industrial and Management Engineering, POSTECH</h3>
+                        <div class="text-blue-600 font-medium mb-3">Undergraduate Research Intern • Advisor: Prof. Bonggyun Jang</div>
                         <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm leading-relaxed">
-                            <li>Managed and organized extensive personnel and logistical data using Excel and internal databases.</li>
-                            <li>Demonstrated high accuracy and discipline in daily administrative operations and documentation.</li>
+                            <li>Valued FX snowball derivatives in Python using Monte Carlo simulation.</li>
+                            <li>Generated underlying asset price paths with a GARCH-in-Mean model to incorporate volatility into expected returns.</li>
                         </ul>
                     </div>
                 </div>
@@ -200,49 +263,29 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-slate-850 text-slate-200 border-t border-slate-900">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-2xl font-bold text-white">Projects & Competitions</h2>
-            <div class="w-10 h-1 bg-blue-500 mt-2 mb-10"></div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-slate-900 p-8 rounded-xl border border-slate-700 hover:border-blue-500 transition-colors">
-                    <div class="text-blue-400 text-3xl mb-4"><i class="ph ph-trend-up"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">DB GAPS Investment Competition</h3>
-                    <p class="text-sm text-slate-400 mb-4">Portfolio Optimization & Strategy</p>
-                    <p class="text-sm text-slate-300 leading-relaxed mb-4">
-                        Participated in the DB GAPS Investment Competition, designing a robust global asset allocation portfolio. Implemented Mean-Variance Optimization (MVO) and Risk Parity strategies to balance yield and volatility.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-slate-800 text-slate-300 px-2 py-1 rounded">Python</span>
-                        <span class="bg-slate-800 text-slate-300 px-2 py-1 rounded">Asset Allocation</span>
-                    </div>
-                </div>
+    <!-- Military Service Section -->
+    <section id="military" class="py-16 px-6 max-w-5xl mx-auto">
+        <h2 class="text-2xl font-bold text-slate-900">Military Service</h2>
+        <div class="section-line"></div>
 
-                <!-- Project 2 -->
-                <div class="bg-slate-900 p-8 rounded-xl border border-slate-700 hover:border-blue-500 transition-colors">
-                    <div class="text-blue-400 text-3xl mb-4"><i class="ph ph-math-operations"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">Algorithm Implementation</h3>
-                    <p class="text-sm text-slate-400 mb-4">CAPM & Kalman Filter</p>
-                    <p class="text-sm text-slate-300 leading-relaxed mb-4">
-                        Developed Python modules from scratch to estimate expected returns using the Capital Asset Pricing Model (CAPM). Applied Kalman Filter algorithms to track unobservable market states and smooth time-series data for algorithmic trading signals.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="bg-slate-800 text-slate-300 px-2 py-1 rounded">NumPy/SciPy</span>
-                        <span class="bg-slate-800 text-slate-300 px-2 py-1 rounded">Time-Series</span>
-                    </div>
-                </div>
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1">
+                <h3 class="text-lg font-bold text-slate-900">Convoy Battalion, R.O.K. Transportation Command</h3>
+                <span class="text-sm text-slate-500 font-medium">Feb 2025 - Aug 2026</span>
             </div>
+            <p class="text-slate-600 mt-1">Administrative Clerk (Sergeant)</p>
+            <ul class="list-disc list-inside text-slate-600 space-y-1 text-sm leading-relaxed mt-2">
+                <li>Personnel Administration: Issued and processed personnel orders for leave and duty assignments.</li>
+                <li>Accounting Administration: Maintained supporting documentation for daily and month-end financial closings.</li>
+            </ul>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-slate-900 py-8 border-t border-slate-800 text-center">
         <div class="max-w-5xl mx-auto px-6 text-slate-400 text-sm">
-            <p>&copy; 2026 [Your Name]. All rights reserved.</p>
-            <p class="mt-2">Built for Quantitative Finance Profile.</p>
+            <p>&copy; 2026 Yejun Kim. All rights reserved.</p>
+            <p class="mt-2">Aspiring Researcher in Finance & Machine Learning.</p>
         </div>
     </footer>
 
