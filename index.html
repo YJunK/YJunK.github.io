@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,8 +55,8 @@
             <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
                 <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
                 <a href="#education" class="hover:text-blue-600 transition-colors">Education</a>
-                <a href="#skills" class="hover:text-blue-600 transition-colors">Skills & Cert</a>
                 <a href="#experience" class="hover:text-blue-600 transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-blue-600 transition-colors">Skills & Cert</a>
                 <a href="#military" class="hover:text-blue-600 transition-colors">Military</a>
             </div>
             <!-- Mobile Menu Toggle -->
@@ -69,8 +69,8 @@
             <div class="flex flex-col px-6 py-4 space-y-3 text-sm font-medium text-slate-600">
                 <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
                 <a href="#education" class="hover:text-blue-600 transition-colors">Education</a>
-                <a href="#skills" class="hover:text-blue-600 transition-colors">Skills & Cert</a>
                 <a href="#experience" class="hover:text-blue-600 transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-blue-600 transition-colors">Skills & Cert</a>
                 <a href="#military" class="hover:text-blue-600 transition-colors">Military</a>
             </div>
         </div>
@@ -140,6 +140,54 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6 max-w-5xl mx-auto">
+        <h2 class="text-2xl font-bold text-slate-900">Experience</h2>
+        <div class="section-line"></div>
+
+        <div class="space-y-12 mt-8">
+            <!-- Experience Item 1 (FIRM Lab) -->
+            <div class="relative pl-8 md:pl-0">
+                <div class="md:hidden absolute left-0 top-2 bottom-0 w-px bg-gray-200"></div>
+                <div class="md:grid md:grid-cols-4 md:gap-8 items-baseline">
+                    <div class="md:col-span-1 text-sm text-slate-500 font-medium pb-2 md:pb-0 relative">
+                        <div class="md:hidden absolute left-[-37px] top-1.5 w-3 h-3 rounded-full bg-blue-600 ring-4 ring-white"></div>
+                        Sep 2024 - Dec 2024
+                    </div>
+                    <div class="md:col-span-3">
+                        <h3 class="text-lg font-bold text-slate-900">FIRM Lab, Dept. of Industrial and Management Engineering, POSTECH</h3>
+                        <div class="text-blue-600 font-medium mb-3">Undergraduate Research Intern • Advisor: Prof. Bonggyun Jang</div>
+                        <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm leading-relaxed">
+                            <li>Priced FX snowball structured products in Python using Monte Carlo simulation of the underlying exchange rate.</li>
+                            <li>Modeled FX rate dynamics with a GARCH-in-Mean process, capturing volatility clustering and its effect on expected returns when generating simulated price paths.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Item 2 (Shape Lab) -->
+            <div class="relative pl-8 md:pl-0">
+                <!-- Timeline line for mobile -->
+                <div class="md:hidden absolute left-0 top-2 bottom-0 w-px bg-gray-200"></div>
+
+                <div class="md:grid md:grid-cols-4 md:gap-8 items-baseline">
+                    <div class="md:col-span-1 text-sm text-slate-500 font-medium pb-2 md:pb-0 relative">
+                        <!-- Timeline dot for mobile -->
+                        <div class="md:hidden absolute left-[-37px] top-1.5 w-3 h-3 rounded-full bg-blue-600 ring-4 ring-white"></div>
+                        Sep 2026 - Present
+                    </div>
+                    <div class="md:col-span-3">
+                        <h3 class="text-lg font-bold text-slate-900">Shape Lab, Graduate School of Artificial Intelligence, POSTECH</h3>
+                        <div class="text-blue-600 font-medium mb-3">Undergraduate Research Intern • Advisor: Prof. Ilwoo Ryu</div>
+                        <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm leading-relaxed">
+                            <li>Researching deep learning methods for analyzing and representing shape geometry.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills & Certifications Section -->
     <section id="skills" class="py-16 bg-white border-y border-gray-200">
         <div class="max-w-5xl mx-auto px-6">
@@ -153,23 +201,23 @@
                     <div class="space-y-4">
                         <div class="border border-gray-100 p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow">
                             <h3 class="font-semibold text-slate-900 flex items-center gap-2">
-                                <i class="ph ph-brain text-blue-600 text-xl"></i> Machine Learning & Mathematics
+                                <i class="ph ph-chart-line-up text-blue-600 text-xl"></i> Markets & Derivatives
                             </h3>
-                            <p class="text-sm text-slate-600 mt-2">Geometric Deep Learning, PyTorch, Differential Geometry, Partial Differential Equations, Optimization</p>
+                            <p class="text-sm text-slate-600 mt-2">Derivatives Pricing (Monte Carlo Simulation), Volatility Modeling (GARCH), Time-Series Analysis, Fixed Income Fundamentals (Bond Valuation, Duration & Convexity)</p>
                         </div>
 
                         <div class="border border-gray-100 p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow">
                             <h3 class="font-semibold text-slate-900 flex items-center gap-2">
                                 <i class="ph ph-code text-blue-600 text-xl"></i> Programming & DB
                             </h3>
-                            <p class="text-sm text-slate-600 mt-2">Python (PyTorch, Pandas, NumPy, SciPy, Scikit-learn), SQL, Excel/VBA</p>
+                            <p class="text-sm text-slate-600 mt-2">Python (Pandas, NumPy, SciPy, Scikit-learn, PyTorch), SQL, Excel/VBA</p>
                         </div>
 
                         <div class="border border-gray-100 p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow">
                             <h3 class="font-semibold text-slate-900 flex items-center gap-2">
-                                <i class="ph ph-chart-line-up text-blue-600 text-xl"></i> Quantitative Finance
+                                <i class="ph ph-function text-blue-600 text-xl"></i> Mathematics
                             </h3>
-                            <p class="text-sm text-slate-600 mt-2">Financial Modeling, Time-Series Analysis, Portfolio Optimization, Risk Management</p>
+                            <p class="text-sm text-slate-600 mt-2">Probability, Statistics, Optimization, Partial Differential Equations</p>
                         </div>
                     </div>
                 </div>
@@ -181,12 +229,12 @@
                     
                     <div class="space-y-4">
                         <div class="flex items-start gap-4 p-4 rounded-lg border border-gray-100 hover:border-blue-200 hover:bg-blue-50/50 transition-colors">
-                            <div class="bg-blue-100 text-blue-700 p-2 rounded text-xl flex-shrink-0">
+                            <div class="bg-gray-100 text-slate-700 p-2 rounded text-xl flex-shrink-0">
                                 <i class="ph ph-certificate"></i>
                             </div>
                             <div>
                                 <h3 class="font-semibold text-slate-900">CFA Level 2</h3>
-                                <p class="text-sm text-slate-500">CFA Institute • Candidate</p>
+                                <p class="text-sm text-slate-500">CFA Institute • Passed, Aug 2026</p>
                             </div>
                         </div>
                         
@@ -209,54 +257,6 @@
                                 <p class="text-sm text-slate-500">Korea Data Agency • Certified, Sep 2025</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 px-6 max-w-5xl mx-auto">
-        <h2 class="text-2xl font-bold text-slate-900">Research Experience</h2>
-        <div class="section-line"></div>
-
-        <div class="space-y-12 mt-8">
-            <!-- Experience Item 1 (Shape Lab) -->
-            <div class="relative pl-8 md:pl-0">
-                <!-- Timeline line for mobile -->
-                <div class="md:hidden absolute left-0 top-2 bottom-0 w-px bg-gray-200"></div>
-
-                <div class="md:grid md:grid-cols-4 md:gap-8 items-baseline">
-                    <div class="md:col-span-1 text-sm text-slate-500 font-medium pb-2 md:pb-0 relative">
-                        <!-- Timeline dot for mobile -->
-                        <div class="md:hidden absolute left-[-37px] top-1.5 w-3 h-3 rounded-full bg-blue-600 ring-4 ring-white"></div>
-                        Sep 2026 - Present
-                    </div>
-                    <div class="md:col-span-3">
-                        <h3 class="text-lg font-bold text-slate-900">Shape Lab, Graduate School of Artificial Intelligence, POSTECH</h3>
-                        <div class="text-blue-600 font-medium mb-3">Undergraduate Research Intern • Advisor: Prof. Ilwoo Ryu</div>
-                        <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm leading-relaxed">
-                            <li>Researching how the geometry of shapes can be analyzed and represented using deep learning methods.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Experience Item 2 (FIRM Lab) -->
-            <div class="relative pl-8 md:pl-0">
-                <div class="md:hidden absolute left-0 top-2 bottom-0 w-px bg-gray-200"></div>
-                <div class="md:grid md:grid-cols-4 md:gap-8 items-baseline">
-                    <div class="md:col-span-1 text-sm text-slate-500 font-medium pb-2 md:pb-0 relative">
-                        <div class="md:hidden absolute left-[-37px] top-1.5 w-3 h-3 rounded-full bg-blue-600 ring-4 ring-white"></div>
-                        Sep 2024 - Dec 2024
-                    </div>
-                    <div class="md:col-span-3">
-                        <h3 class="text-lg font-bold text-slate-900">FIRM Lab, Dept. of Industrial and Management Engineering, POSTECH</h3>
-                        <div class="text-blue-600 font-medium mb-3">Undergraduate Research Intern • Advisor: Prof. Bonggyun Jang</div>
-                        <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm leading-relaxed">
-                            <li>Valued FX snowball derivatives in Python using Monte Carlo simulation.</li>
-                            <li>Generated underlying asset price paths with a GARCH-in-Mean model to incorporate volatility into expected returns.</li>
-                        </ul>
                     </div>
                 </div>
             </div>
